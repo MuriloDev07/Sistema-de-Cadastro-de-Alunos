@@ -19,8 +19,8 @@ $(TARGET): $(SRCS)
 
 # Regra para limpar o projeto (remover o executável)
 clean:
-# Para Windows:
-	del /Q /F $(TARGET).exe
+# Para Linux: 
+	rm -f $(TARGET) $(TARGET).exe
 
-# Para Linux: rm -f $(TARGET) $(TARGET).exe
-	
+# Para Windows:
+#	del /Q /F $(TARGET).exe

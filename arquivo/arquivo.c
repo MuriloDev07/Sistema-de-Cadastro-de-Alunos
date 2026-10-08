@@ -7,7 +7,6 @@ void salvarEmArquivo(struct Aluno *cabeca, const char *arquivo) {
 
     FILE *arquivoAberto = fopen(arquivo, "w"); // Nome para o FILE é diferente do parametro original
     if (arquivoAberto == NULL) {
-        printf("Arquivo ainda não foi criado!\n");
         printf("Erro ao abrir o arquivo!\n");
         return;
     }
@@ -16,7 +15,7 @@ void salvarEmArquivo(struct Aluno *cabeca, const char *arquivo) {
         fprintf(arquivoAberto, "%s %d %f\n", atual->nome, atual->idade, atual->nota);
         atual = atual->proximo;
     }
-
+    printf("Arquivo salvo com sucesso!\n");
     fclose(arquivoAberto);
 }
 
@@ -24,7 +23,6 @@ void salvarEmArquivo(struct Aluno *cabeca, const char *arquivo) {
 struct Aluno* carregarArquivo(const char *arquivo) {
     FILE *arquivoAberto = fopen(arquivo, "r");
     if (arquivoAberto == NULL) {
-        printf("Erro ao abrir o arquivo\n");
         return NULL;
     }
 
