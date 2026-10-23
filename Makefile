@@ -26,4 +26,4 @@ clean:
 #	del /Q /F $(TARGET).exe
 
 docker-run:
-	docker run -it --rm -v "$$PWD/alunos.txt:/usr/src/myapp/alunos.txt" cadastro-alunos
+	docker run -it --rm -v "$$PWD/alunos.txt:/app/alunos.txt" cadastro-alunos

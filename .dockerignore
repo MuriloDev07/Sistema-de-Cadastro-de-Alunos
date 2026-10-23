@@ -1,0 +1,14 @@
+# Versionamento e editores
+.git
+.vscode/
+
+# Executáveis locais
+*.o
+sistema
+
+# Dados locais
+alunos.txt
+*.log
+
+# Ficheiros do Docker
+Dockerfile
